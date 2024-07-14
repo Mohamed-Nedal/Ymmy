@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Yummy Exam (Route)" />
+    <title>Yummy</title>
+
+    <!-- ============= CSS Files ====================== -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Loading -->
+    <div class="main-loading">
+      <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+    </div>
+
+    <!-- Inner Loading -->
+    <div class="inner-loading" id="innerLoading">
+      <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+    </div>
+
+    <!-- ================ Navbar ================= -->
+    <nav id="navbar">
+      <!-- ---- Left Side -->
+      <div class="left-nav">
+        <ul class="navbar-list">
+          <li class="">
+            <a href="#searchPage" class="nav-link">Search</a>
+          </li>
+          <li class="mb-3">
+            <a href="#catigoriesPage" class="nav-link">categories</a>
+          </li>
+          <li class="mb-3">
+            <a href="#areaPage" class="nav-link">Area</a>
+          </li>
+          <li class="mb-3">
+            <a href="#ingredientsPage" class="nav-link">Ingredients</a>
+          </li>
+          <li class="mb-3">
+            <a href="#contactUs" class="nav-link">Contact Us</a>
+          </li>
+        </ul>
+
+        <div>
+          <div class="d-flex items-center gap-2">
+            <a href="" class="social-link">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="" class="social-link">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="" class="social-link">
+              <i class="fa-solid fa-globe"></i>
+            </a>
+          </div>
+          <p class="mt-2">
+            All Rights Reserved &copy; 2024. By
+            <a
+              href="https://wa.me/+201156636141"
+              class="text-capitalize text-sm"
+              >mohamed nedal</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <!-- ---- Right Side ---- -->
+      <div class="right-nav">
+        <img src="./assets/logo.png" alt="Yummy Logo" width="50" />
+
+        <i class="fa-solid fa-bars open-close-navbar"></i>
+
+        <div class="d-flex flex-column">
+          <a href="" class="text-black">
+            <i class="fa-solid fa-globe"></i>
+          </a>
+          <a href="" class="text-black">
+            <i class="fa-solid fa-share-nodes"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- =============== Show Meals ============== -->
+
+    <section class="page" id="showMealsPage">
+      <div class="container">
+        <div class="row-meals">
+          <div class="row row-gap-4" id="mealsGallery"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Search Page ================ -->
+    <section class="page" id="searchPage">
+      <div class="container">
+        <div class="search-inputs mb-5">
+          <div class="row row-gap-2">
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="search-input form-control"
+                name="search-by-name"
+                placeholder="Search By Name"
+                id="searchByNameInput"
+              />
+            </div>
+            <div class="col-md-6">
+              <input
+                type="text"
+                class="search-input form-control"
+                name="search-by-first-letter"
+                placeholder="Search By First Letter"
+                id="searchByFirstLetterInput"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Show Search Result -->
+        <div class="show-search-result">
+          <div class="row row-gap-3" id="searchResult"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============= Categories Page ================== -->
+    <section class="page" id="categoriesPage">
+      <div class="container">
+        <div class="row row-gap-3" id="categoriesContainer"></div>
+      </div>
+    </section>
+
+    <!-- ============== Area Page ================== -->
+    <section class="page" id="areaPage">
+      <div class="container">
+        <div class="row row-gap-3" id="areaContainer"></div>
+      </div>
+    </section>
+
+    <!-- ============== Ingredients Page =================== -->
+    <section class="page" id="ingredientsPage">
+      <div class="container">
+        <div class="row row-gap-3" id="ingredientsContainer"></div>
+      </div>
+    </section>
+
+    <!-- =============== Contact Us ==================== -->
+    <section class="page" id="contactUs">
+      <div class="container">
+        <div class="contact-content">
+          <div class="row row-gap-3">
+            <div class="col-md-6">
+              <fieldset>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  placeholder="Your Name"
+                />
+
+                <div class="alert alert-danger form-alert">
+                  Special characters and numbers not allowed
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-md-6">
+              <fieldset>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="Your Email"
+                />
+
+                <div class="alert alert-danger form-alert">
+                  Email not valid * exemple@xxx.xx
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-md-6">
+              <fieldset>
+                <input
+                  type="tel"
+                  name="phone"
+                  class="form-control"
+                  placeholder="Your Phone Number"
+                />
+
+                <div class="alert alert-danger form-alert">
+                  Phone Number Not Valid
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-md-6">
+              <fieldset>
+                <input
+                  type="number"
+                  name="age"
+                  class="form-control"
+                  placeholder="Your Age"
+                />
+
+                <div class="alert alert-danger form-alert">
+                  Age Not Valid ( * > 18 )
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-md-6">
+              <fieldset>
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  placeholder="Password"
+                />
+
+                <div class="alert alert-danger form-alert">
+                  Enter valid password *Minimum eight characters, at least one
+                  letter and one number:*
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-md-6">
+              <fieldset>
+                <input
+                  type="password"
+                  name="confirm-password"
+                  class="form-control"
+                  placeholder="Confirm Password"
+                />
+
+                <div class="alert alert-danger form-alert">
+                  The Password Not Matched
+                </div>
+              </fieldset>
+            </div>
+            <div class="col-12 text-center">
+              <button class="action-btn" id="submitContactBtn">Send</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =============== Details Page ================== -->
+    <section class="page" id="detailsPage">
+      <div class="container">
+        <div class="row" id="detailsData"></div>
+      </div>
+    </section>
+
+    <!-- ================= JS Files ================= -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script type="module" src="./js/script.js"></script>
+  </body>
+</html>
